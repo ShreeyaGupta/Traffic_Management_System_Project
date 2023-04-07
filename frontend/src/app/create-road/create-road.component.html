@@ -1,0 +1,26 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Create Road </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Road Name</label>
+            <input type="text" class ="form-control" id = "roadName"
+                [(ngModel)] = "road.roadName" name = "roadName"> <!--to use ngModel we import FormsModule  -->
+        </div>
+    
+        <div class="form-group">
+            <label> Detector Name</label>
+            <input type="text" class ="form-control" id = "detectorName"
+                [(ngModel)] = "road.detectorName" name = "detectorName">
+        </div>
+    
+        <div class="form-group">
+            <label> Detector Up</label>
+            <input type="text" class ="form-control" id = "detectorUp"
+                [(ngModel)] = "road.detectorUp" name = "detectorUp">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 

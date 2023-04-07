@@ -1,0 +1,23 @@
+<h2>Road List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Road Name</th>
+            <th> Detector Name </th>
+            <th> Detector Up</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let road of roads" >
+            <td> {{ road.roadName }} </td>
+            <td> {{ road.detectorName }} </td>
+            <td> {{ road.detectorUp }} </td>
+            <td>
+                <button (click) = "updateRoad(road.roadId)" class = "btn btn-info"> Update</button> <!--Define in road-list.comp.ts-->
+                <button (click) = "deleteRoad(road.roadId)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "roadDetails(road.roadId)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td> 
+        </tr>
+    </tbody>
+</table>

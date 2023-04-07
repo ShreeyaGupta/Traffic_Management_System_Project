@@ -1,0 +1,31 @@
+<h2>Traffic List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Road Name</th>
+            <th> Detector Name </th>
+            <th> Occupancy Percentage</th>
+            <th> Average speed </th>
+            <th> Class One Volume </th>
+            <th> Class Two Volume</th>
+            <th> Class Three Volume </th>
+            <th>Volume</th>
+            <th>Date</th>
+            <th>Period</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let traffic of traffics" >
+            <td> {{ traffic.roadName }} </td>
+            <td> {{ traffic.detectorName }} </td>
+            <td> {{ traffic.occupancyPercentage }} </td>
+            <td> {{ traffic.averageSpeed }} </td>
+            <td> {{ traffic.classOneVolume }} </td>
+            <td> {{ traffic.classTwoVolume }} </td>
+            <td> {{ traffic.classThreeVolume }} </td>
+            <td> {{ traffic.volume }} </td>
+            <td> {{ traffic.date }} </td>
+            <td> {{ traffic.period }} </td>
+        </tr>
+    </tbody>
+</table>
